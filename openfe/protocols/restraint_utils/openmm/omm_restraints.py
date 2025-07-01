@@ -48,7 +48,7 @@ from openfe.protocols.restraint_utils.settings import (
 from .omm_forces import (
     get_custom_compound_bond_force,
     add_force_in_separate_group,
-    get_boresch_energy_function,
+    get_boresch_energy_function, get_periodic_boresch_energy_function,
 )
 
 
@@ -603,7 +603,7 @@ class BoreschRestraint(BaseHostGuestRestraints):
           An OpenMM CustomCompoundForce that applies a Boresch-like
           restraint between 6 atoms.
         """
-        efunc = get_boresch_energy_function(controlling_parameter_name)
+        efunc = get_periodic_boresch_energy_function(controlling_parameter_name)
 
         force = get_custom_compound_bond_force(
             energy_function=efunc, n_particles=6,
