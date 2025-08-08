@@ -1488,7 +1488,6 @@ class SepTopComplexSetupUnit(SepTopComplexMixin, BaseSepTopSetupUnit):
             topology_format="OPENMMTOPOLOGY",
             trajectory_format=MemoryReader,
         )
-        print(u_A)
         u_B = self._center_in_box(
             omm_topology_B, positions_B, selection=selection,
         )
