@@ -1884,7 +1884,6 @@ class SepTopComplexSetupUnit(SepTopComplexMixin, BaseSepTopSetupUnit):
             omm_topology_B,
             equil_positions_A,
             equil_positions_B,
-            selection='protein',
         )
 
         # Get atom indices for ligand A and ligand B and the solvent in the
